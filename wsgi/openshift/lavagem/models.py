@@ -22,7 +22,7 @@ class Venda(models.Model):
     carro = models.ForeignKey(Carro, verbose_name='Carro', on_delete=models.DO_NOTHING)
     categoria = models.ForeignKey(Categoria, verbose_name='Categoria', on_delete=models.DO_NOTHING)
     entrada = models.DateTimeField(auto_now=True, verbose_name='Entrada')
-    saida = models.DateTimeField(auto_now=True, verbose_name='Saída', null=True)
+    saida = models.DateTimeField(auto_now=True, verbose_name='Saida', null=True)
     km = models.DecimalField(max_digits=16, decimal_places=2, verbose_name='Quilometragem')
     status = models.CharField(verbose_name='Status', choices=STATUS_CHOICES, default=ST_ENTRADA)
 
