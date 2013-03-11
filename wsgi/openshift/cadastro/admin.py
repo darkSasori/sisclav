@@ -3,7 +3,7 @@ from cliente import AdminCliente
 from models import *
 
 class AdminModelo(admin.ModelAdmin):
-	list_display = ('nome', 'veiculo', 'marca')
+	list_display = ('nome', 'veiculo', 'marca',)
 	search_fields = ['nome', 'veiculo__nome', 'marca__nome']
 
 class AdminValor(admin.ModelAdmin):
