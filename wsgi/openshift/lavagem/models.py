@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from cadatro.models import Carro, Categoria
+from cadastro.models import Carro, Categoria
 
 class Venda(models.Model):
     funInterior = models.ForeignKey(User, verbose_name='Funcionario Interior', on_delete=models.DO_NOTHING)
