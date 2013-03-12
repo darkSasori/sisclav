@@ -10,5 +10,6 @@ class AdminVenda(admin.ModelAdmin):
     search_fields = ['carro_placa',]
     list_filtes = ('status',)
     excludes = ('saida', 'status',)
+    inlines = [InlineItem
 
 admin.site.register(Venda, AdminVenda)
