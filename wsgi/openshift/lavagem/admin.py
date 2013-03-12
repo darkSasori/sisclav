@@ -7,7 +7,6 @@ class InlineItem(admin.TabularInline):
 
 class AdminVenda(admin.ModelAdmin):
     inlines = [InlineItem]
-    exclude = ('saida', 'status',)
     list_display = ('carro', 'categoria', 'entrada', 'saida', 'km', 'status', 'funInterior', 'funExterior',)
     search_fields = ['carro_placa',]
     list_filtes = ('status',)
