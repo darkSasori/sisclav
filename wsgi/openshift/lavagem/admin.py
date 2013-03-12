@@ -10,6 +10,6 @@ class AdminVenda(admin.ModelAdmin):
     list_display = ('carro', 'categoria', 'entrada', 'saida', 'km', 'status', 'funInterior', 'funExterior',)
     search_fields = ['carro_placa',]
     list_filtes = ('status',)
-    excludes = ('saida', 'status',)
+    exclude = ('saida', 'status',)
 
 admin.site.register(Venda, AdminVenda)
