@@ -6,10 +6,10 @@ class InlineItem(admin.TabularInline):
     raw_id_fields = ('raw_id_fields',)
 
 class AdminVenda(admin.ModelAdmin):
+    inlines = [InlineItem]
     list_display = ('carro', 'categoria', 'entrada', 'saida', 'km', 'status', 'funInterior', 'funExterior',)
     search_fields = ['carro_placa',]
     list_filtes = ('status',)
     excludes = ('saida', 'status',)
-    inlines = [InlineItem
 
 admin.site.register(Venda, AdminVenda)
