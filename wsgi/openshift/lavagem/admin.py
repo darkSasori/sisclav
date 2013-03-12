@@ -3,7 +3,7 @@ from models import *
 
 class InlineItem(admin.TabularInline):
     model = VendaItem
-    raw_id_fields = ('raw_id_fields',)
+    raw_id_fields = ('produto',)
 
 class AdminVenda(admin.ModelAdmin):
     inlines = [InlineItem]
